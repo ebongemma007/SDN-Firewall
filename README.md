@@ -20,27 +20,32 @@ The network consists of:
 - Ryu controller
 
 ## Setup Instructions
-1.** Clone this repository**:
+1.**Clone this repository**:
    ```bash
    git clone https://github.com/ebongemma007/SDN-Firewall
-
+```
 2.**Install Ryu**:
+   ```bash
    sudo apt update
    sudo apt install python3-ryu
-
+```
 3. **Run the Ryu Firewall Application**: Start the Ryu controller and run the firewall application
+```bash
    ryu-manager firewall.py
-
-4. **Start Mininet with Custom Topology**: Use the provided topology script to launch Mininet
+```
+5. **Start Mininet with Custom Topology**: Use the provided topology script to launch Mininet
+```bash
    sudo python3 sdn_topology.py
-
-5. **Test the Network**: Ping hosts to verify ICMP blocking
+```
+7. **Test the Network**: Ping hosts to verify ICMP blocking
+```bash
    mininet> h1 ping h2
-
+```
    You can also test port-based filtering using tools like **netcat** or attempt an SSH connection
+   ```bash
    mininet> h1 nc -l 80
    mininet> h2 nc h1 80
-
+```
 
  **Advanced Features**:
   
